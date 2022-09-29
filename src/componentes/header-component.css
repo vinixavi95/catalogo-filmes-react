@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+
+.container {
+    height: 300px;
+    background-color: #10151F;
+    border: #ffffff solid 1px;
+}
+
+.titulo-header {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-family: Raleway;
+    color: #E04A6D; 
+}
+
+.subtitulo-header {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-family: Raleway;
+    color: #ffffff; 
+}
