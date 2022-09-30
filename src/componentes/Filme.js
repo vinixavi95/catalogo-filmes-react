@@ -1,12 +1,12 @@
-import './filme-component.css';
+import './Filme.css';
 
 function Filme(props) {
    
     return (
 
-        <div className="container_2">
+        <div className="container-filme">
             <div className="img-container">
-                <img className="imagem" src={props.img}></img>
+                <img className="imagem" src={props.img} alt=""></img>
             </div>
 
             <h1 className="nome-filme">{props.nome}</h1>
