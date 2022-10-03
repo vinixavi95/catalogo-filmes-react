@@ -27,7 +27,7 @@
     top: 390px;
     left: 20px;
     
-    color: #E04A6D;
+    color: #FFFFFF;
     font-size: 25px;
     font-family: Raleway;
 }
@@ -36,7 +36,7 @@
     position: absolute;
     top: 440px;
     left: 20px;
-    color: #00EFFF;
+    color: #ffffff;
     font-family: Raleway;
 }
 
@@ -44,7 +44,7 @@
     position: absolute;
     top: 460px;
     left: 20px;
-    color: #00EFFF;
+    color: #fffFFF;
     font-family: Raleway;
 }
 
@@ -52,7 +52,7 @@
     position: absolute;
     top: 480px;
     left: 20px;
-    color: #00EFFF;
+    color: #fffFFF;
     font-family: Raleway;
 }
 
@@ -60,6 +60,6 @@
     position: absolute;
     top: 500px;
     left: 20px;
-    color: #00EFFF;
+    color: #fffFFF;
     font-family: Raleway;
 }

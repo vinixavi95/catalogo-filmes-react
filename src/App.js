@@ -3,7 +3,6 @@ import Header from './componentes/header-component';
 import Filmes from './componentes/Filmes';
 
 
-
 function App() {
 
   const filmes = [{
@@ -82,9 +81,10 @@ function App() {
 
   return (
     <div>
+
       <Header />
 
-      <Filmes filme={filmes}/>
+      <Filmes filme={filmes} />
       
 
     </div>

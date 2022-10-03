@@ -1,7 +1,6 @@
 import Filme from './Filme';
 import Container from './Container';
 
-
 import CasinoRoyale from './imagens/casinoRoyale.jpeg'
 import EfeitoBorboleta from './imagens/efeitoBorboleta.jpeg'
 import PlanetaDosMacacos from './imagens/planetaDosMacacos.jpeg'
@@ -14,7 +13,7 @@ import BadBoys2 from './imagens/badBoys2.jpeg'
 
 function Filmes(props) {
     return (
-        <Container className="armazem">
+        <Container>
             <Filme 
                 img={CasinoRoyale}
                 nome={props.filme[0].nome}
