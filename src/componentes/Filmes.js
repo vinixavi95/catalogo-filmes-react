@@ -1,5 +1,6 @@
 import Filme from './Filme';
-import Container from './Container';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
 import CasinoRoyale from './imagens/casinoRoyale.jpeg'
 import EfeitoBorboleta from './imagens/efeitoBorboleta.jpeg'
@@ -11,10 +12,28 @@ import VingadoresUltron from './imagens/vingadoresUltron.jpeg'
 import PiratasDoCaribe from './imagens/piratasDoCaribe.jpeg'
 import BadBoys2 from './imagens/badBoys2.jpeg'
 
+const useStyles = makeStyles({
+    container: {
+        
+    }
+})
+
+
 function Filmes(props) {
+
+    const classes = useStyles();
+
+    const renderFilmes = props.filme.map(filme => 
+    <Filme></Filme>
+)
+
     return (
-        <Container>
-            <Filme 
+        <Grid container direction="column" justifyContent="flex-start" alignItems="stretch" className={classes.container}>
+
+            
+            {renderFilmes}
+
+            {/* <Filme 
                 img={CasinoRoyale}
                 nome={props.filme[0].nome}
                 genero={props.filme[0].genero}
@@ -22,7 +41,7 @@ function Filmes(props) {
                 idioma={props.filme[0].idioma}
                 diretor={props.filme[0].diretor}
             />
-
+        
             <Filme
                 img={EfeitoBorboleta}
                 nome={props.filme[1].nome}
@@ -93,9 +112,9 @@ function Filmes(props) {
                 ano={props.filme[8].ano}
                 idioma={props.filme[8].idioma}
                 diretor={props.filme[8].diretor}
-             />
+             /> */}
 
-        </Container>
+        </Grid>
     )
 }
 

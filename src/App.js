@@ -1,6 +1,7 @@
 import './App.css';
-import Header from './componentes/header-component';
+import Header from './componentes/Header';
 import Filmes from './componentes/Filmes';
+import Container from '@material-ui/core/Container';
 
 
 function App() {
@@ -80,12 +81,13 @@ function App() {
     }]
 
   return (
-    <div>
 
+    <div>
       <Header />
 
-      <Filmes filme={filmes} />
-      
+      <Container>
+        <Filmes filme={filmes} />
+      </Container>
 
     </div>
 
