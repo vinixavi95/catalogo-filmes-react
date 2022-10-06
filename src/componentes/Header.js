@@ -9,6 +9,7 @@ const useStyle = makeStyles({
         maxHeight: 400,
         maxWidth: 1400,
         padding: 0,
+        border: 'solid white'
     },
 
     typographyH1: {
