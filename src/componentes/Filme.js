@@ -7,9 +7,9 @@ const useStyles = makeStyles({
     container: {
         position: 'relative',
         height: 400,
-        backgroundColor: '#10151F',
-        border: 'white solid',
-        
+        backgroundColor: '#171B24',
+        border: 'solid',
+        marginTop: 70
     },
 
     imgContainer: {

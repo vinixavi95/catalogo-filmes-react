@@ -1,24 +1,23 @@
 import './App.css';
 import Header from './componentes/Header';
 import Filmes from './componentes/Filmes';
-import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 
-import CasinoRoyale from './componentes/imagens/casinoRoyale.jpeg'
-import EfeitoBorboleta from './componentes/imagens/efeitoBorboleta.jpeg'
-import PlanetaDosMacacos from './componentes/imagens/planetaDosMacacos.jpeg'
-import NarutoTheLast from './componentes/imagens/narutoTheLast.webp'
-import TropaDeElite from './componentes/imagens/tropaDeElite.jpeg'
-import ClubeDaLuta from './componentes/imagens/clubeDaLuta.jpeg'
-import VingadoresUltron from './componentes/imagens/vingadoresUltron.jpeg'
-import PiratasDoCaribe from './componentes/imagens/piratasDoCaribe.jpeg'
-import BadBoys2 from './componentes/imagens/badBoys2.jpeg'
+import CasinoRoyale from './componentes/imagens/casinoRoyale.jpeg';
+import EfeitoBorboleta from './componentes/imagens/efeitoBorboleta.jpeg';
+import PlanetaDosMacacos from './componentes/imagens/planetaDosMacacos.jpeg';
+import NarutoTheLast from './componentes/imagens/narutoTheLast.webp';
+import TropaDeElite from './componentes/imagens/tropaDeElite.jpeg';
+import ClubeDaLuta from './componentes/imagens/clubeDaLuta.jpeg';
+import VingadoresUltron from './componentes/imagens/vingadoresUltron.jpeg';
+import PiratasDoCaribe from './componentes/imagens/piratasDoCaribe.jpeg';
+import BadBoys2 from './componentes/imagens/badBoys2.jpeg';
 
 
 const useStyles = makeStyles({
   background: {   
-    backgroundColor: '#10151F',
-  },
+    backgroundColor: '#04070F',
+  }
 
 })
 
