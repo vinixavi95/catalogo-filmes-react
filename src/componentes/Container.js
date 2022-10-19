@@ -2,7 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function Armazem(props) {
+function Container(props) {
   return (
     <Container spacing={10} color="primary" >{props.children}</Container>
   );

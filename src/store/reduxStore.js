@@ -1,12 +1,16 @@
-import {createStore} from 'redux';
-
-const renderReducer = (state, action) => {
-  if (state === 0) {
-    return state;
-  }
-};
+import {configureStore, createSlice} from '@reduxjs/toolkit';
 
 
-const store = createStore(renderReducer);
+const initialState = {
+  
+}
+
+const filmeSlice = createSlice({
+  name: 'filme',
+  initialState
+});
+
+
+const store = 0;
 
 export default store;

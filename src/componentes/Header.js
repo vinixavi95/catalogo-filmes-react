@@ -29,7 +29,6 @@ const useStyle = makeStyles({
   },
 });
 
-
 function Header() {
   const classes = useStyle();
 
