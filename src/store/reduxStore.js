@@ -1,16 +1,11 @@
-import {configureStore, createSlice} from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
+
+import filmesReducer from './filmesRedux';
 
 
-const initialState = {
-  
-}
-
-const filmeSlice = createSlice({
-  name: 'filme',
-  initialState
+const store = configureStore({
+  reducer: {filmes: filmesReducer}
 });
 
-
-const store = 0;
 
 export default store;

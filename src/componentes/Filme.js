@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 
+
 const useStyles = makeStyles({
     container: {
         position: 'relative',
@@ -50,24 +51,31 @@ const useStyles = makeStyles({
 })
 
 
-function Filme(props) {
+function Filme({data}) {
 
     const classes = useStyles();
+
+    const img = data.img
+    const nome = data.nome
+    const genero = data.genero
+    const ano = data.ano
+    const idioma = data.idioma
+    const diretor = data.diretor
 
     return (
 
         <Container className={classes.container}>
 
             <Box className={classes.imgContainer}>
-                <img className={classes.img} src={props.img} alt=""></img>
+                <img className={classes.img} src={img} alt=""></img>
             </Box>
 
             <Box className={classes.typographyBox}>
-                <Typography className={classes.typographyH1} variant="h1">{props.nome}</Typography>
-                <Typography className={classes.typography}>{props.genero}</Typography>
-                <Typography className={classes.typography}>{props.ano}</Typography>
-                <Typography className={classes.typography}>{props.idioma}</Typography>
-                <Typography className={classes.typography}>{props.diretor}</Typography>
+                <Typography className={classes.typographyH1} variant="h1">{nome}</Typography>
+                <Typography className={classes.typography}>{genero}</Typography>
+                <Typography className={classes.typography}>{ano}</Typography>
+                <Typography className={classes.typography}>{idioma}</Typography>
+                <Typography className={classes.typography}>{diretor}</Typography>
             </Box>
 
         </Container>

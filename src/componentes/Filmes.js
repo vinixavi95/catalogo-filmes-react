@@ -1,7 +1,10 @@
 import Filme from './Filme';
 import Grid from '@material-ui/core/Grid';
 import {makeStyles} from '@material-ui/core/styles';
+import filmes from '../store/listaFilmes';
 
+import {useSelector} from 'react-redux';
+import {selectFilm} from '../store/filmesRedux';
 
 const useStyles = makeStyles({
   container: {
@@ -10,20 +13,16 @@ const useStyles = makeStyles({
   },
 });
 
+function Filmes() {
 
-function Filmes(props) {
   const classes = useStyles();
 
-  const renderFilmes = props.filme.map((f) =>
+  const filmes = useSelector(state => state.filmes.filmes)
 
-    <Filme
-      img={f.img}
-      nome={f.nome}
-      genero={f.genero}
-      ano={f.ano}
-      idioma={f.idioma}
-      diretor={f.diretor}
-    />,
+  const renderFilmes = filmes.map((data, index) =>
+
+    <Filme data={data} key={index}/>
+      
   );
 
   return (
