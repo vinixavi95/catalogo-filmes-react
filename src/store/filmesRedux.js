@@ -14,4 +14,4 @@ const filmeSlice = createSlice({
 
 
 export default filmeSlice.reducer;
-export const selectFilm = (state) => state.filme.filmes
+export const selectFilm = (state) => state.filme.initialStateFilme

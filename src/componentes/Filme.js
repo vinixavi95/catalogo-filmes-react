@@ -2,6 +2,8 @@ import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import { Button } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles({
@@ -46,12 +48,20 @@ const useStyles = makeStyles({
         color: '#ffffff',
         fontSize: 20,
         fontFamily: 'Roboto'
-    }
+    },
+    button: {
+        backgroundColor: '#E04A6D',
+        color: '#ffffff',
+        position: 'absolute',
+        bottom: 60,
+        right: 150,
+    },
+
     
 })
 
 
-function Filme({data}) {
+function Filme({data, showModal, index}) {
 
     const classes = useStyles();
 
@@ -61,7 +71,16 @@ function Filme({data}) {
     const ano = data.ano
     const idioma = data.idioma
     const diretor = data.diretor
+    const sinopse = data.sinopse
 
+
+    const buttonHandler = (e) => {
+        e.preventDefault();
+        
+        showModal(index)
+    }
+    
+    
     return (
 
         <Container className={classes.container}>
@@ -77,6 +96,10 @@ function Filme({data}) {
                 <Typography className={classes.typography}>{idioma}</Typography>
                 <Typography className={classes.typography}>{diretor}</Typography>
             </Box>
+
+            {/* MODAL BUTTON PARA TELA DE DETALHES */}
+            <Button onClick={buttonHandler} size="large" className={classes.button}>Detalhes</Button>
+
 
         </Container>
 
