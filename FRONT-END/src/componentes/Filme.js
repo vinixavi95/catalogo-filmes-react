@@ -3,6 +3,10 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { Button } from '@material-ui/core';
+import PropTypes from 'prop-types';
+
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 
 const useStyles = makeStyles({
     container: {
@@ -54,37 +58,45 @@ const useStyles = makeStyles({
         bottom: 60,
         right: 150,
     },
-
     
 });
 
 
-function Filme({data, showModal, index}) {
-
-    const classes = useStyles();
-
-    const img = data.img;
-    const nome = data.nome;
-    const genero = data.genero;
-    const ano = data.ano;
-    const idioma = data.idioma;
-    const diretor = data.diretor;
+function Filme({showModal, index}) {
     
-
+    const classes = useStyles();
 
     const buttonHandler = (e) => {
         e.preventDefault();
         
         showModal(index);
     };
-    
+
+    const [dados, setDados] = useState([]);
+
+    useEffect(() => {
+       axios.get('http://localhost:2000/')
+       .then((res) => {
+        setDados(res.filmes)
+        console.log(res)
+       })
+
+       console.log(dados)
+    }, [])
+
+    // const img = data.img;
+    const nome = setDados.nome;
+    const genero = setDados.genero;
+    const ano = setDados.ano;
+    const idioma = setDados.idioma;
+    const diretor = setDados.diretor;    
     
     return (
 
         <Container className={classes.container}>
 
             <Box className={classes.imgContainer}>
-                <img className={classes.img} src={img} alt=""></img>
+                <img className={classes.img} src="" alt=""></img>
             </Box>
 
             <Box className={classes.typographyBox}>
@@ -103,5 +115,11 @@ function Filme({data, showModal, index}) {
 
     );
 }
+
+
+Filme.propTypes = {
+    showModal: PropTypes.bool.isRequired,
+    index: PropTypes.number.isRequired
+};
 
 export default Filme;

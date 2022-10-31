@@ -37,7 +37,6 @@ function Filmes() {
 
     const filmes = useSelector(state => state.filmes.filmes);
 
-
     return (
         <Grid container
             direction="column"
