@@ -5,7 +5,8 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-import {useSelector} from 'react-redux';
+
+// import {useSelector} from 'react-redux';
 
 
 const useStyles = makeStyles({
@@ -35,7 +36,8 @@ function Filmes() {
 
     const classes = useStyles();
 
-    const filmes = useSelector(state => state.filmes.filmes);
+    const filmes = filmes
+
 
     return (
         <Grid container

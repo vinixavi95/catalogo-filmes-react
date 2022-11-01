@@ -1,12 +1,12 @@
 
-const arrayFilmes = require('./model/arrayFilmes');
+const filmes = require('./controller/index');
 
 const Hapi = require('@hapi/hapi');
 
 const init = async () => {
 
     const server = Hapi.server({
-        port: 2000,
+        port: 2001,
         host: 'localhost',
 
     });
@@ -16,7 +16,7 @@ const init = async () => {
         path: '/', // 1 - path - This is the route that will be specified on a URL.
         handler: (req, res) => { // 3 - handler function - This is the function that will run when the route is called. This function takes two parameters, req, and reply. 
 
-            return (arrayFilmes.filmes)
+            return (filmes)
         }
     });
 

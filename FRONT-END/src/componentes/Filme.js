@@ -81,7 +81,11 @@ function Filme({showModal, index}) {
         console.log(res)
        })
 
-       console.log(dados)
+       .catch(() => {
+        console.log(dados + 'erro')
+       })
+       
+       
     }, [])
 
     // const img = data.img;
