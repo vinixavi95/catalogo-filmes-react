@@ -4,9 +4,8 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import axios from 'axios';
-import React, {useState, useEffect} from 'react';
 
 const useStyles = makeStyles({
     container: {
@@ -62,7 +61,7 @@ const useStyles = makeStyles({
 });
 
 
-function Filme({showModal, index}) {
+function Filme({data, showModal, index}) {
     
     const classes = useStyles();
 
@@ -72,28 +71,13 @@ function Filme({showModal, index}) {
         showModal(index);
     };
 
-    const [dados, setDados] = useState([]);
-
-    useEffect(() => {
-       axios.get('http://localhost:2000/')
-       .then((res) => {
-        setDados(res.filmes)
-        console.log(res)
-       })
-
-       .catch(() => {
-        console.log(dados + 'erro')
-       })
-       
-       
-    }, [])
 
     // const img = data.img;
-    const nome = setDados.nome;
-    const genero = setDados.genero;
-    const ano = setDados.ano;
-    const idioma = setDados.idioma;
-    const diretor = setDados.diretor;    
+    const nome = data.nome;
+    const genero = data.genero;
+    const ano = data.ano;
+    const idioma = data.idioma;
+    const diretor = data.diretor;    
     
     return (
 
@@ -123,7 +107,8 @@ function Filme({showModal, index}) {
 
 Filme.propTypes = {
     showModal: PropTypes.bool.isRequired,
-    index: PropTypes.number.isRequired
+    index: PropTypes.number.isRequired,
+    data: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Filme;

@@ -1,10 +1,11 @@
 import Filme from './Filme';
 import Grid from '@material-ui/core/Grid';
 import {makeStyles} from '@material-ui/core/styles';
-import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 
 // import {useSelector} from 'react-redux';
 
@@ -36,7 +37,20 @@ function Filmes() {
 
     const classes = useStyles();
 
-    const filmes = filmes
+    const [filmes, setFilmes] = useState([]);
+
+    useEffect(() => {
+       axios.get('http://localhost:2001/')
+       .then((res) => {
+        setFilmes(res.data.filmes)
+        console.log(res)
+       })
+       .catch(() => {
+        console.log(filmes + 'erro')
+       })
+       
+       
+    }, [])
 
 
     return (
