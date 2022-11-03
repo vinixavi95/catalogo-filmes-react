@@ -17,23 +17,40 @@ const useStyles = makeStyles({
     },
     detalhes: {
         position: 'absolute',
+        left: 165,
+        top: 385,
         overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         border: 'solid #E04A6D',
-        height: 450,
+        height: 400,
         width: 1000,
         backgroundColor: 'black',
         color: '#ffffff'
     },
     detalhesClose: {
-        cursor: 'pointer'
+        cursor: 'pointer',
+        margin: 10,
+        fontSize: 40
+    },
+    detalhesH1: {
+        position: 'relative',
+        left: 0,
+        margin: 20,
+        color: '#E04A6D',
+        fontSize: 50
+    },
+    detalhesP: {
+        position: 'relative',
+        left: 0,
+        margin: 20,
+        fontSize: 25
     }
 });
 
 function Filmes() {
 
-    const [modal, showModal] = React.useState(false);
+    const [modal, showModal] = useState(false);
 
     const classes = useStyles();
 
@@ -68,14 +85,14 @@ function Filmes() {
             {typeof modal == 'number' && <Box id="" className={classes.detalhes}>
                 <Box className="">
                     <span onClick={()=>showModal(false) } className={classes.detalhesClose}>&times;</span>
-                    <Typography variant="h1">Detalhes</Typography>
-                    <Typography>{filmes[modal].sinopse}</Typography>
+                    <Typography className={classes.detalhesH1} variant="h1">Sinopse</Typography>
+                    <Typography className={classes.detalhesP}>{filmes[modal].sinopse}</Typography>
                 </Box>
             </Box>}
           
           
         </Grid>
-    );
+    )
 }
 
 export default Filmes;

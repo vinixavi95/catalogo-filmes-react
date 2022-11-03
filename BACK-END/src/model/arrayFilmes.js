@@ -1,3 +1,13 @@
+// const CasinoRoyale = require('./imagens/casinoRoyale.jpeg');
+// const EfeitoBorboleta = require('./imagens/efeitoBorboleta.jpeg');
+// const PlanetaDosMacacos = require('./imagens/planetaDosMacacos.jpeg');
+// const NarutoTheLast = require('./imagens/narutoTheLast.webp');
+// const TropaDeElite = require('./imagens/tropaDeElite.jpeg');
+// const ClubeDaLuta = require('./imagens/clubeDaLuta.jpeg');
+// const VingadoresUltron = require('./imagens/vingadoresUltron.jpeg');
+// const PiratasDoCaribe = require('./imagens/piratasDoCaribe.jpeg');
+// const BadBoys2 = require('./imagens/badBoys2.jpeg');
+
 // import CasinoRoyale from './imagens/casinoRoyale.jpeg';
 // import EfeitoBorboleta from './imagens/efeitoBorboleta.jpeg';
 // import PlanetaDosMacacos from './imagens/planetaDosMacacos.jpeg';

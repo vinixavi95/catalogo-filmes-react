@@ -41,14 +41,12 @@ const useStyles = makeStyles({
     typographyH1: {
         color: '#ffffff',
         fontSize: 40,
-        fontFamily: 'Roboto',
-        height: 100
+        height: 150
     },
 
     typography: {
         color: '#ffffff',
-        fontSize: 20,
-        fontFamily: 'Roboto'
+        fontSize: 25,
     },
     button: {
         backgroundColor: '#E04A6D',
